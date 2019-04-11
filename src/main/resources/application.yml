@@ -1,0 +1,57 @@
+server:
+  port: 7777
+
+#actutor配置默认
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#数据库连接配置
+spring:
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/zero?characterEncoding=utf8&useSSL=true&serverTimezone=Hongkong&nullNamePatternMatchesAll=true
+    name: root
+    password: 12263520
+    driver-class-name: com.mysql.jdbc.Driver
+#redis配置
+  redis:
+    host: 127.0.0.1
+    password:
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8 #最大连接数 0表示没有限制
+  cache:
+    type: redis #Simple 只适合单体应用或者开发环境使用，再或者是 个小微系统 r
+  session:
+    store-type: redis
+  #rabbitmq设置
+  rabbitmq:
+    host: cloud.com
+    port: 5672
+    username: min
+    password: 12263520
+#
+#sring:
+#    datasource:
+#      driverClassName: com.mysql.jdbc.Driver
+#      url: jdbc:mysql://47.99.89.202:3306/zero?characterEncoding=utf8&useSSL=true&serverTimezone=Hongkong&nullNamePatternMatchesAll=true
+#      name: root
+#      password: 12263520
+
+#    jpa:
+#      database: mysql
+#      hibernate:
+#        ddl-auto: update #自动创建表结构
+#      show-sql: true
+
+
+
+
+
