@@ -15,11 +15,11 @@ spring:
       ddl-auto: update
     show-sql: true
   datasource:
-    url: jdbc:mysql://localhost:3306/zero?characterEncoding=utf8&useSSL=true&serverTimezone=Hongkong&nullNamePatternMatchesAll=true
-    name: root
+    url: jdbc:mysql://localhost:3306/zero?characterEncoding=utf8&serverTimezone=Hongkong&nullNamePatternMatchesAll=true
     password: 12263520
     driver-class-name: com.mysql.jdbc.Driver
-#redis配置
+    username: root
+  #redis配置
   redis:
     host: 127.0.0.1
     password:
@@ -38,13 +38,13 @@ spring:
     username: min
     password: 12263520
 #
-#sring:
+#spring:
 #    datasource:
 #      driverClassName: com.mysql.jdbc.Driver
 #      url: jdbc:mysql://47.99.89.202:3306/zero?characterEncoding=utf8&useSSL=true&serverTimezone=Hongkong&nullNamePatternMatchesAll=true
-#      name: root
 #      password: 12263520
-
+#      username: root
+#
 #    jpa:
 #      database: mysql
 #      hibernate:
